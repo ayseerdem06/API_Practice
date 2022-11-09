@@ -12,7 +12,7 @@ public class WriteToText {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
 
             for (int i = 0; i < customers.length; i++) {
-                //writer.append(customers[i].getSsn() + ",\n");
+                writer.append(customers[i].getSsn() + ",\n");
             }
             writer.close();
         } catch (Exception e) {
@@ -24,7 +24,7 @@ public class WriteToText {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, false));
 
             for (int i = 0; i < customers.length; i++) {
-                //writer.append(customers[i].getEmail() + ",\n");
+                writer.append(customers[i].getEmail() + ",\n");
             }
             writer.close();
         } catch (Exception e) {

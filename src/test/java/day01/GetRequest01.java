@@ -24,7 +24,7 @@ public class GetRequest01 {
 
         //response.prettyPeek();         //response taki herşeyi yazdırır.
 
-        //response.peek();
+        // response.peek();              // header'ı ve string olarak datayı verir
 
         //response.print();     //string olarak dataye verir
         // [{"bookingid":1215},{"bookingid":844},{"bookingid":87},{"bookingid":747}, ...]

@@ -10,7 +10,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class Authentication {
+public class Authentication extends GMIBankBaseURL{
 
   /*  public static void main(String[] args) {
         String guncelToken = generateToken();

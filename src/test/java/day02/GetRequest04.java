@@ -1,8 +1,11 @@
 package day02;
 
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
@@ -37,6 +40,13 @@ public class GetRequest04 {
         response.then().assertThat().body("data", hasSize(24)
                 , "data.employee_name", hasItem("Ashton Cox")
                 , "data.employee_age", hasItems(21, 61, 23));
+
+
+        // listin uzunluğuna kod ile erişebilmek için
+        JsonPath json = response.jsonPath();
+        List<Integer> idList = json.getList("data.id");
+        System.out.println(idList.size());
+
     }
 
 }
